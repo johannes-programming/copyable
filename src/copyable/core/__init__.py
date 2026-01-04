@@ -9,6 +9,8 @@ __all__ = ["Copyable"]
 class Copyable(ABC):
     __slots__ = ()
 
+    __hash__ = None
+
     @abstractmethod
     @setdoc.basic
     def copy(self: Self) -> Self: ...
