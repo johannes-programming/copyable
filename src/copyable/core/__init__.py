@@ -1,8 +1,14 @@
+from abc import ABC, abstractmethod
 from typing import *
 
-__all__ = ["main"]
+import setdoc
+
+__all__ = ["Copyable"]
 
 
-def main(args: Optional[Iterable] = None) -> None:
-    "This function prints 'Hello World!'."
-    print("Hello World!")
+class Copyable(ABC):
+    __slots__ = ()
+
+    @abstractmethod
+    @setdoc.basic
+    def copy(self: Self) -> Self: ...
