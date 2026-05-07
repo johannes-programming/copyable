@@ -1,7 +1,7 @@
 [build-system]
 build-backend = "setuptools.build_meta"
 requires = [
-    "setuptools>=64.0",
+    "setuptools>=77.0",
 ]
 
 [project]
@@ -28,7 +28,7 @@ license-files = [
 name = "copyable"
 readme = "README.rst"
 requires-python = ">=3.11"
-version = "1.1.0"
+version = "1.1.1"
 
 [project.urls]
 Download = "https://pypi.org/project/copyable/#files"
