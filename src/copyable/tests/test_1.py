@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import copy
 import unittest
 from typing import *
 
@@ -35,6 +36,26 @@ class TestCopyable1(unittest.TestCase):
         c: Point
         p = Point(1, 2)
         c = p.copy()
+
+        self.assertIsInstance(c, Point)
+        self.assertIsNot(c, p)
+        self.assertEqual((c.x, c.y), (p.x, p.y))
+
+    def test_copy_copy(self: Self) -> None:
+        class Point(Copyable):
+            __slots__ = ("x", "y")
+
+            def __init__(self: Self, x: int, y: int) -> None:
+                self.x = x
+                self.y = y
+
+            def copy(self: Self) -> Self:
+                return type(self)(self.x, self.y)
+
+        p: Point
+        c: Point
+        p = Point(1, 2)
+        c = copy.copy(p)
 
         self.assertIsInstance(c, Point)
         self.assertIsNot(c, p)
