@@ -31,7 +31,7 @@ This abc allows for copyable descendent classes.
 
 This abstract method is meant to duplicate the object.
 
-``copyable.test() -> unittest.TextTestRunner``
+``copyable.test() -> unittest.TextTestResult``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This project can be tested through its test function.

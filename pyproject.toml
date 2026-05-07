@@ -19,7 +19,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "setdoc>=1.2.7,<2",
+    "setdoc>=1.2.16,<2",
 ]
 description = "This project provides a copyable ABC."
 keywords = []
