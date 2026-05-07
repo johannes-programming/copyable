@@ -5,8 +5,10 @@ from typing import *
 
 from copyable.core import Copyable
 
+__all__ = ["TestCopyable0"]
 
-class TestCopyable(unittest.TestCase):
+
+class TestCopyable0(unittest.TestCase):
     def test_is_abstract(self: Self) -> None:
         # Copyable must be an abstract base class and not directly instantiable.
         self.assertIsInstance(Copyable, ABCMeta)
