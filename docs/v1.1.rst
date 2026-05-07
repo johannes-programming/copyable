@@ -1,0 +1,65 @@
+Overview
+--------
+
+This project provides a copyable ``ABC``.
+
+Installation
+------------
+
+To install ``copyable``, you can use ``pip``. Open your terminal and run:
+
+.. code-block:: shell
+
+    pip install copyable
+
+Features
+--------
+
+``class copyable.Copyable()``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This abc allows for copyable descendent classes.
+
+``__hash__ = None``
+^^^^^^^^^^^^^^^^^^^
+
+``__slots__ = ()``
+^^^^^^^^^^^^^^^^^^
+
+``copy() -> Self``
+^^^^^^^^^^^^^^^^^^
+
+This abstract method is meant to duplicate the object.
+
+``copyable.test() -> unittest.TextTestResult``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This project can be tested through its test function.
+
+.. code-block:: python
+        
+    import copyable
+    copyable.test()
+
+License
+-------
+
+This project is licensed under the MIT License.
+
+Links
+-----
+
+- Download: https://pypi.org/project/copyable/#files
+- Index: https://pypi.org/project/copyable/
+- Source: https://github.com/johannes-programming/copyable/
+- Website: https://copyable.johannes-programming.online/
+
+Impressum
+---------
+
+**Johannes Programming**
+
+- Name: Johannes
+- Email: johannes.programming@gmail.com
+- Homepage: https://www.johannes-programming.online/
+- Gravatar: https://www.johannes-programming.fyi/
