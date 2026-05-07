@@ -5,8 +5,9 @@ from typing import *
 
 from copyable.core import Copyable
 
+__all__=["TestCopyable1"]
 
-class TestCopyable(unittest.TestCase):
+class TestCopyable1(unittest.TestCase):
     def test_copyable_cannot_be_instantiated(self: Self) -> None:
         with self.assertRaises(TypeError):
             Copyable()  # abstract
