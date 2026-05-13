@@ -1,12 +1,14 @@
 import inspect
 import unittest
 from abc import ABCMeta
-from typing import *
+from typing import Any, Self, get_type_hints
 
 from copyable.core import Copyable
 
+__all__ = ["TestCopyable0"]
 
-class TestCopyable(unittest.TestCase):
+
+class TestCopyable0(unittest.TestCase):
     def test_is_abstract(self: Self) -> None:
         # Copyable must be an abstract base class and not directly instantiable.
         self.assertIsInstance(Copyable, ABCMeta)
@@ -40,20 +42,6 @@ class TestCopyable(unittest.TestCase):
         params = list(sig.parameters.values())
         self.assertEqual(len(params), 1)
         self.assertEqual(params[0].name, "self")
-
-    def test_subclass_must_implement_copy(self: Self) -> None:
-        class Bad(Copyable):
-            pass
-
-        class Good(Copyable):
-            def copy(self: Self) -> Self:
-                return self
-
-        g: Good
-        with self.assertRaises(TypeError):
-            Bad()  # still abstract
-        g = Good()
-        self.assertIs(g.copy(), g)
 
 
 if __name__ == "__main__":

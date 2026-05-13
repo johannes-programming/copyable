@@ -1,7 +1,7 @@
 [build-system]
 build-backend = "setuptools.build_meta"
 requires = [
-    "setuptools>=64.0",
+    "setuptools>=77.0",
 ]
 
 [project]
@@ -10,7 +10,6 @@ authors = [
 ]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
-    "License :: OSI Approved :: MIT License",
     "Natural Language :: English",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
@@ -19,20 +18,28 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "setdoc>=1.2.7,<2",
+    "setdoc>=1.2.20,<2",
 ]
 description = "This project provides a copyable ABC."
 keywords = []
+license = "MIT"
+license-files = [
+    "LICENSE.txt",
+]
 name = "copyable"
 readme = "README.rst"
 requires-python = ">=3.11"
-version = "1.0.1"
-
-[project.license]
-file = "LICENSE.txt"
+version = "1.1.4"
 
 [project.urls]
 Download = "https://pypi.org/project/copyable/#files"
 Index = "https://pypi.org/project/copyable/"
 Source = "https://github.com/johannes-programming/copyable/"
 Website = "https://copyable.johannes-programming.online/"
+
+[tool.mypy]
+files = [
+    ".",
+]
+python_version = "3.11"
+strict = true

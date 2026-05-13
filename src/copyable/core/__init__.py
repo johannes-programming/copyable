@@ -9,6 +9,7 @@ __all__ = ["Copyable"]
 class Copyable(ABC):
     __slots__ = ()
 
+    __hash__: Any
     __hash__ = None
 
     @abstractmethod
