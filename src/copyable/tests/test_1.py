@@ -3,7 +3,7 @@ from __future__ import annotations
 import unittest
 from typing import Any, Self
 
-from copyable.core import Copyable
+from copyable.core.Copyable import Copyable
 
 __all__ = ["TestCopyable1"]
 
