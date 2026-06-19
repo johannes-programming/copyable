@@ -3,7 +3,7 @@ import unittest
 from abc import ABCMeta
 from typing import Any, Self, get_type_hints
 
-from copyable.core import Copyable
+from copyable.core.Copyable import Copyable
 
 __all__ = ["TestCopyable0"]
 

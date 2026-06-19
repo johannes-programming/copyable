@@ -1,2 +1,1 @@
-from copyable.core import *
-from copyable.tests import *
+from copyable.core.Copyable import Copyable
