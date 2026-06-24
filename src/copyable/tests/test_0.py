@@ -9,13 +9,17 @@ __all__ = ["TestCopyable0"]
 
 
 class TestCopyable0(unittest.TestCase):
+    """Test the abstract copyable contract."""
+
     def test_is_abstract(self: Self) -> None:
+        """Verify abstractness."""
         # Copyable must be an abstract base class and not directly instantiable.
         self.assertIsInstance(Copyable, ABCMeta)
         with self.assertRaises(TypeError):
             Copyable()  # type: ignore[abstract]
 
     def test_slots_hash_and_abstractmethod(self: Self) -> None:
+        """Verify slots, hash, and abstract method."""
         copy_attr: Any
         # __slots__ is explicitly empty and __hash__ disabled.
         self.assertTrue(hasattr(Copyable, "__slots__"))
@@ -28,6 +32,7 @@ class TestCopyable0(unittest.TestCase):
         self.assertTrue(getattr(copy_attr, "__isabstractmethod__", False))
 
     def test_copy_signature_and_annotations(self: Self) -> None:
+        """Verify signature and annotations."""
         # Ensure there's a "copy" method and it has type hints present.
         # Note: runtime "Self" may or may not resolve depending on Python version;
         # we just verify annotations are present and consistent.

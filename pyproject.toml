@@ -29,7 +29,7 @@ license-files = [
 name = "copyable"
 readme = "README.rst"
 requires-python = ">=3.11"
-version = "1.1.5"
+version = "1.1.6"
 
 [project.urls]
 Download = "https://pypi.org/project/copyable/#files"
