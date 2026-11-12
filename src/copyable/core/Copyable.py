@@ -1,9 +1,11 @@
+from __future__ import annotations
+
+__all__: list[str] = ["Copyable"]
+
 from abc import ABC, abstractmethod
 from typing import Any, Self
 
 import setdoc
-
-__all__ = ["Copyable"]
 
 
 class Copyable(ABC):

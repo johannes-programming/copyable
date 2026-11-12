@@ -1,5 +1,7 @@
 """Expose public package API."""
 
-from copyable.core.Copyable import Copyable
+from __future__ import annotations
 
-__all__ = ["Copyable"]
+__all__: list[str] = ["Copyable"]
+
+from copyable.core.Copyable import Copyable

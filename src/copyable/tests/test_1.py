@@ -1,11 +1,11 @@
 from __future__ import annotations
 
+__all__: list[str] = ["TestCopyable1"]
+
 import unittest
 from typing import Any, Self
 
 from copyable.core.Copyable import Copyable
-
-__all__ = ["TestCopyable1"]
 
 
 class TestCopyable1(unittest.TestCase):

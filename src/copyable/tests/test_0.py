@@ -1,11 +1,14 @@
+from __future__ import annotations
+
+__all__: list[str] = ["TestCopyable0"]
+
+
 import inspect
 import unittest
 from abc import ABCMeta
 from typing import Any, Self, get_type_hints
 
 from copyable.core.Copyable import Copyable
-
-__all__ = ["TestCopyable0"]
 
 
 class TestCopyable0(unittest.TestCase):

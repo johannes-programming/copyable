@@ -18,7 +18,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "setdoc>=1.2.20,<2",
+    "setdoc<2,>=1.2.20",
 ]
 description = "This project provides a copyable ABC."
 keywords = []
@@ -29,7 +29,7 @@ license-files = [
 name = "copyable"
 readme = "README.rst"
 requires-python = ">=3.11"
-version = "1.1.6"
+version = "1.1.7"
 
 [project.urls]
 Download = "https://pypi.org/project/copyable/#files"
