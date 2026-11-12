@@ -16,11 +16,11 @@ class TestCopyable1(unittest.TestCase):
         with self.assertRaises(TypeError):
             cls()  # abstract
 
-    def test_copyable_cannot_be_instantiated(self: Self) -> None:
+    def test_copyable_cannot_be_instantiated(self: Self, /) -> None:
         """Reject direct instantiation."""
         self._test_init_raises(Copyable)
 
-    def test_subclass_without_copy_is_abstract(self: Self) -> None:
+    def test_subclass_without_copy_is_abstract(self: Self, /) -> None:
         """Reject incomplete subclass."""
 
         class Bad(Copyable):
@@ -28,28 +28,28 @@ class TestCopyable1(unittest.TestCase):
 
         self._test_init_raises(Bad)
 
-    def test_subclass_must_implement_copy(self: Self) -> None:
+    def test_subclass_must_implement_copy(self: Self, /) -> None:
         """Accept complete subclass."""
 
         class Good(Copyable):
-            def copy(self: Self) -> Self:
+            def copy(self: Self, /) -> Self:
                 return self
 
         g: Good
         g = Good()
         self.assertIs(g.copy(), g)
 
-    def test_copy_returns_same_type_and_new_instance(self: Self) -> None:
+    def test_copy_returns_same_type_and_new_instance(self: Self, /) -> None:
         """Return copied instance."""
 
         class Point(Copyable):
             __slots__ = ("x", "y")
 
-            def __init__(self: Self, x: int, y: int) -> None:
+            def __init__(self: Self, /, x: int, y: int) -> None:
                 self.x = x
                 self.y = y
 
-            def copy(self: Self) -> Self:
+            def copy(self: Self, /) -> Self:
                 return type(self)(self.x, self.y)
 
         p: Point
